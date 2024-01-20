@@ -1421,7 +1421,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("⚠️ Uɴᴀᴠᴀɪʟᴀʙʟᴇ ⚠️", callback_data=f"unalert#{from_user}")
               ]]
         btn2 = [[
-                 InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url="https://t.me/TG_LINKS_CHANNEL"),
+                 InlineKeyboardButton('Jᴏɪɴ Cʜᴀɴɴᴇʟ', url="https://t.me/inoxhubb"),
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
                ]]
         if query.from_user.id in ADMINS:
@@ -1672,7 +1672,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "plan1":
         buttons = [[
-            InlineKeyboardButton('Send ScreenShot', url="https://t.me/Tg_support1_bot"), 
+            InlineKeyboardButton('Send ScreenShot', url="https://t.me/sam_07dz"), 
             InlineKeyboardButton('HOW ITS WORK', url="https://t.me/TG_UPDATES1/391") 
         ],[
             InlineKeyboardButton('CHECK PLANS', callback_data='check')
@@ -1699,7 +1699,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ) 
     elif query.data == "plan2":
         buttons = [[
-            InlineKeyboardButton('Send ScreenShot', url="https://t.me/Tg_support1_bot"), 
+            InlineKeyboardButton('Send ScreenShot', url="https://t.me/sam_07dz"), 
             InlineKeyboardButton('HOW ITS WORK', url="https://t.me/TG_UPDATES1/391") 
         ],[  
             InlineKeyboardButton('CHECK PLANS', callback_data='check')                   
@@ -1726,7 +1726,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ) 
     elif query.data == "plan3":
         buttons = [[
-            InlineKeyboardButton('Send ScreenShot', url="https://t.me/Tg_support1_bot"), 
+            InlineKeyboardButton('Send ScreenShot', url="https://t.me/sam_07dz"), 
             InlineKeyboardButton('HOW ITS WORK', url="https://t.me/TG_UPDATES1/391") 
         ],[
             InlineKeyboardButton('CHECK PLANS', callback_data='check')
