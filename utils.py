@@ -467,8 +467,8 @@ async def get_shortlink(chat_id, link, second=False):
         URL = SHORTLINK_URL
         API = SHORTLINK_API
     if URL.startswith("shorturllink") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in") or second:
-        URL = SECOND_SHORTLINK_URL
-        API = SECOND_SHORTLINK_API
+        URL = SHORTLINK_URL
+        API = SHORTLINK_API
     if URL == "api.shareus.io":
         # method 1:
         # https = link.split(":")[0] #splitting https or http from link
