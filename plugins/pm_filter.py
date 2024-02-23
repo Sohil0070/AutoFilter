@@ -1563,7 +1563,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "buy_premium":
         btn = [
-            [InlineKeyboardButton("🤫 ɢᴇᴛ ꜰʀᴇᴇ ᴛʀɪᴀʟ 🤫", callback_data="get_trail")],
+            [InlineKeyboardButton("🤫 ɢᴇᴛ ꜰʀᴇᴇ ᴛʀɪᴀʟ 🤫", callback_data="close_data")],
             [InlineKeyboardButton("✅sᴇɴᴅ ʏᴏᴜʀ ᴘᴀʏᴍᴇɴᴛ ʀᴇᴄᴇɪᴘᴛ ʜᴇʀᴇ✅", url="https://telegram.me/NobiDeveloperr")],
             [InlineKeyboardButton("⚠️ᴄʟᴏsᴇ / ᴅᴇʟᴇᴛᴇ⚠️", callback_data="close_data")]
         ]
