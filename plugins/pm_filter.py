@@ -1548,22 +1548,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.answer(MSG_ALRT)
         
-# elif query.data == "get_trail":
- #       user_id = query.from_user.id
-  #      free_trial_status = await db.get_free_trial_status(user_id)
-   #     if not free_trial_status:            
-    #        await db.give_free_trail(user_id)
-     #       new_text = "**ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ꜰʀᴇᴇ ᴛʀᴀɪʟ ꜰᴏʀ 5 ᴍɪɴᴜᴛᴇs ꜰʀᴏᴍ ɴᴏᴡ 😀\n\nआप अब से 5 मिनट के लिए निःशुल्क ट्रायल का उपयोग कर सकते हैं 😀**"        
-      #      await query.message.edit_text(text=new_text)
-       #     return
-       # else:
-        #    new_text= "**🤣 you already used free now no more free trail. please buy subscription here are our 👉 /plans**"
-         #   await query.message.edit_text(text=new_text)
-          #  return
+ elif query.data == "give_trail":
+        user_id = query.from_user.id
+        free_trial_status = await db.check_trial_status(user_id)
+        if not free_trial_status:            
+            await db.give_free_trail(user_id)
+            new_text = "**ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ꜰʀᴇᴇ ᴛʀᴀɪʟ ꜰᴏʀ 5 ᴍɪɴᴜᴛᴇs ꜰʀᴏᴍ ɴᴏᴡ 😀\n\nआप अब से 5 मिनट के लिए निःशुल्क ट्रायल का उपयोग कर सकते हैं 😀**"        
+            await query.message.edit_text(text=new_text)
+            return
+        else:
+            new_text= "**🤣 you already used free now no more free trail. please buy subscription here are our 👉 /plans**"
+            await query.message.edit_text(text=new_text)
+            return
 
     elif query.data == "buy_premium":
         btn = [
-            [InlineKeyboardButton("🤫 ɢᴇᴛ ꜰʀᴇᴇ ᴛʀɪᴀʟ 🤫", callback_data="close_data")],
+            [InlineKeyboardButton("🤫 ɢᴇᴛ ꜰʀᴇᴇ ᴛʀɪᴀʟ 🤫", callback_data="give_trail")],
             [InlineKeyboardButton("✅sᴇɴᴅ ʏᴏᴜʀ ᴘᴀʏᴍᴇɴᴛ ʀᴇᴄᴇɪᴘᴛ ʜᴇʀᴇ✅", url="https://telegram.me/NobiDeveloperr")],
             [InlineKeyboardButton("⚠️ᴄʟᴏsᴇ / ᴅᴇʟᴇᴛᴇ⚠️", callback_data="close_data")]
         ]
