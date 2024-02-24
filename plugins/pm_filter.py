@@ -1548,7 +1548,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.answer(MSG_ALRT)
         
- elif query.data == "give_trail":
+   elif query.data == "give_trail":
         user_id = query.from_user.id
         free_trial_status = await db.check_trial_status(user_id)
         if not free_trial_status:            
