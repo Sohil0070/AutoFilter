@@ -1550,7 +1550,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "give_trial":
          user_id = query.from_user.id
-        free_trial_status = await db.check_trial_status(user_id)
+         free_trial_status = await db.check_trial_status(user_id)
         if not free_trial_status:            
             await db.give_free_trail(user_id)
             new_text = "**ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ꜰʀᴇᴇ ᴛʀᴀɪʟ ꜰᴏʀ 5 ᴍɪɴᴜᴛᴇs ꜰʀᴏᴍ ɴᴏᴡ 😀\n\nआप अब से 5 मिनट के लिए निःशुल्क ट्रायल का उपयोग कर सकते हैं 😀**"        
